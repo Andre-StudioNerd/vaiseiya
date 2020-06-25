@@ -1,61 +1,59 @@
-class Personagem{
-  constructor(imagem){
-    this.altura = 135;
-    this.largura = 110;
+class Personagem extends Animacao {
+  constructor(imagem, matriz, x, y, largura, altura, lSprite, aSprite, somPulo) {
+    super(imagem, matriz, x, y, largura, altura, lSprite, aSprite);
+    //this.somPulo = somPulo;
+    this.y0 = y;
     
-    // Caracteristicas do sprite utilizado
-    this.imagem = imagem;      // Sprite utilizado
-    this.spriteAltura = 270;   // Altura do personagem dentro do sprite
-    this.spriteLargura = 230;  // Largura do personagem dentro do sprite
-    // Variaveis auxiliares para o sprite
-    this.spriteI = 0;          // Index de coluna 
-    this.spriteJ = 0;          // Index de linha
-    //Posições dentro do sprite
-    this.posicapSpriteX = 0;
-    this.posicaoSpriteY = 0;
-    
-    // Posicionamento na tela
-    this.posicaoX = 55;
-    this.posicaoY = height - 320;
-  
-  
-  }
-  exibe(){
-    image(this.imagem,
-          
-      this.posicaoX, 
-      this.posicaoY, 
-      this.largura, 
-      this.altura,
-      
-      this.posicaoSpriteX, 
-      this.posicaoSpriteY, 
-      this.spriteLargura, 
-      this.spriteAltura
-     );
+    this.vPulo = 0;
+    this.gravidade = 20;
+    this.qntPulos = 10;
+   
 
-this.anima()
-    
   }
-  anima(){
-    this.spriteI++ ;
-    
-    if (this.spriteI >3) {
-      this.spriteI = 0;
-      this.spriteJ ++ ;
-      
-      if (this.spriteJ >3){
-        this.spriteJ = 0;  
-        }
-      }
   
-    // Atualiza a posição inicial dentro do sprite
-    this.posicaoSpriteX = this.spriteI * this.spriteLargura;
-    this.posicaoSpriteY = this.spriteJ * this.spriteAltura;
-      
-       
-       
-       
-  
+  pular() {
+    if (this.qntPulos > 0) {
+      this.vPulo = -50;
+      this.qntPulos--;
+      //this.somPulo.play();
+    }
   }
+  simularGravidade() {
+    this.y += this.vPulo;
+    this.vPulo += this.gravidade;
+    
+    if (this.y > this.y0){
+      this.y = this.y0;
+      this.qntPulos = 10;
+    }
+  }
+
+  
+  
+  detectarColisao(inimigo) {
+    
+    
+    const precisao = 0.7;
+    const colisao = collideRectRect(
+      this.x, 
+      this.y, 
+      this.largura * precisao, 
+      this.altura * precisao,
+      inimigo.x,
+      inimigo.y,
+      inimigo.largura * precisao,
+      inimigo.altura * precisao
+    );
+    
+    return colisao;
+  }
+
+
+  
+  
+ 
+  
 }
+
+
+
