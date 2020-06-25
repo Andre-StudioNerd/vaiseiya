@@ -182,6 +182,9 @@ function draw() {
     inimigo.exibe();
     inimigo.move();
 
+    paralaxe.exibe();
+    paralaxe.move();
+
   if (personagem.detectarColisao(inimigo)) {
     somColisao.play();
     somDoJogo.pause();
@@ -191,8 +194,7 @@ function draw() {
   }
 
 
-  paralaxe.exibe();
-  paralaxe.move();
+  
 
   
   
