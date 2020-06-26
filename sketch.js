@@ -5,8 +5,14 @@ function setup() {
   paralaxe=new Paralaxe(imagemParalaxe,12);
   pontuacao = new Pontuacao();
   
-  inimigo = new Inimigo(imagemInimigo, matrizInimigo, width-55, height-240, 50, 50, 96, 96);
+  const inimigo = new Inimigo(imagemInimigo, matrizInimigo, width-55, height-240, 50, 50, 96, 96,10, 200);
+
+  const inimigoVoador = new Inimigo(matrizInimigoVoador, imagemInimigoVoador, width - 52, 200, 100, 75, 200, 150, 10, 1500);
+  const inimigoGrande = new Inimigo(matrizInimigoGrande, imagemInimigoGrande, width , 0, 200, 200, 400, 400, 10, 2500)  
   personagem=new Personagem(imagemPersonagem,matrizInimigo,255, height-240, 50, 50, 96, 96);
+
+
+  
   
   
   
