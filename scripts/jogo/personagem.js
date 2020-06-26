@@ -1,30 +1,32 @@
 class Personagem extends Animacao {
-  constructor(imagem, matriz, x, y, largura, altura, lSprite, aSprite, somPulo) {
-    super(imagem, matriz, x, y, largura, altura, lSprite, aSprite);
-    //this.somPulo = somPulo;
-    this.y0 = y;
-    
-    this.vPulo = 0;
-    this.gravidade = 20;
-    this.qntPulos = 10;
-   
+  
 
+
+ constructor(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite) {
+    super(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite);
+
+    this.variacaoY = variacaoY
+    this.yInicial = height - this.altura - this.variacaoY;
+    this.y = this.yInicial;
+
+    this.velocidadeDoPulo = 0;
+    this.gravidade = 6;
+    this.alturaDoPulo = -50;
+    this.pulos = 0;
   }
   
   pular() {
-    if (this.qntPulos > 0) {
-      this.vPulo = -50;
-      this.qntPulos--;
-      //this.somPulo.play();
-    }
+    if (this.pulos < 2)
+      this.velocidadeDoPulo = this.alturaDoPulo;
+    this.pulos++;
   }
   simularGravidade() {
-    this.y += this.vPulo;
-    this.vPulo += this.gravidade;
-    
-    if (this.y > this.y0){
-      this.y = this.y0;
-      this.qntPulos = 10;
+    this.y = this.y + this.velocidadeDoPulo;
+    this.velocidadeDoPulo = this.velocidadeDoPulo + this.gravidade;
+
+    if (this.y > this.yInicial) {
+      this.y = this.yInicial;
+      this.pulos = 0;
     }
   }
 
@@ -33,18 +35,10 @@ class Personagem extends Animacao {
   detectarColisao(inimigo) {
     
     
-    const precisao = 0.7;
-    const colisao = collideRectRect(
-      this.x, 
-      this.y, 
-      this.largura * precisao, 
-      this.altura * precisao,
-      inimigo.x,
-      inimigo.y,
-      inimigo.largura * precisao,
-      inimigo.altura * precisao
-    );
-    
+    const precisao = .7;
+
+    const colisao = collideRectRect(this.x, this.y, this.largura * precisao, this.altura * precisao, inimigo.x, inimigo.y, inimigo.largura * precisao, inimigo.altura * precisao);
+
     return colisao;
   }
 
