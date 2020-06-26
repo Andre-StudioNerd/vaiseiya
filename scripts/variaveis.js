@@ -1,6 +1,8 @@
 let imagemCenario;
 let imagemPersonagem;
 let imagemInimigo;
+let imagemInimigoGrande;
+let imagemInimigoVoador;
 let imagemGameOver;
 let imagemParalaxe;
 let imagemTelaInicial;
@@ -15,11 +17,14 @@ let botaoGerenciador;
 
 let somColisao;
 let somInimigo;
-let cenario;
 let somPulo;
 let somDoJogo;
+
+let cenario;
 let personagem;
 let inimigo;
+let inimigoGrande;
+let inimigoVoador;
 let pontuacao;
 
 

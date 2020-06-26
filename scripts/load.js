@@ -3,7 +3,10 @@ function preload(){
     imagemPersonagem=loadImage('imagens/personagem/seiya_pegasus.png');
     imagemInimigo = loadImage('imagens/inimigos/docrates.png');
     
-    
+    imagemTelaInicial =
+    loadImage('imagens/sistema/telaInicial.png');
+  fonteTelaInicial =
+    loadFont('imagens/sistema/fonteTelaInicial.otf');
     
     imagemParalaxe=loadImage('imagens/cenario/santuario.png');
     
