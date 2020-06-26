@@ -11,7 +11,7 @@ function preload(){
   fonteTelaInicial =
     loadFont('imagens/sistema/fonteTelaInicial.otf');
     
-    imagemParalaxe=loadImage('imagens/cenario/santuario.png');
+    //imagemParalaxe=loadImage('imagens/cenario/santuario.png');
     
     
     

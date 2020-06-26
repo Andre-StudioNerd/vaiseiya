@@ -2,7 +2,7 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   cenario=new Cenario(imagemCenario,10);
-  paralaxe=new Paralaxe(imagemParalaxe,12);
+  //paralaxe=new Paralaxe(imagemParalaxe,12);
   pontuacao = new Pontuacao();
   
   const inimigo = new Inimigo(imagemInimigo, matrizInimigo, width-55, height-240, 50, 50, 96, 96,10, 200);
@@ -47,8 +47,8 @@ function draw() {
     inimigo.exibe();
     inimigo.move();
 
-    paralaxe.exibe();
-    paralaxe.move();
+   // paralaxe.exibe();
+   // paralaxe.move();
 
   if (personagem.detectarColisao(inimigo)) {
     somColisao.play();
