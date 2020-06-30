@@ -15,6 +15,7 @@ let telaInicial;
 let botaoGerenciador;
 
 let cenario;
+let somIntro;
 let somDoJogo;
 let personagem;
 let inimigo;

@@ -19,4 +19,8 @@ function preload() {
     loadSound('sons/intro.mp3');
   somDoPulo =
     loadSound('sons/jump.mp3');
+    somDoJogo =
+    loadSound('sons/intro.mp3');
+  somIntro =
+    loadSound('sons/vaiseiya.mp3');
 }
