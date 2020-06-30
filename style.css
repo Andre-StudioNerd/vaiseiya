@@ -19,7 +19,7 @@ canvas {
 }
 
 .botao-tela-inicial {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding: 1rem 1.25rem;
   font-size: 1.5rem;
   letter-spacing: .25rem;
