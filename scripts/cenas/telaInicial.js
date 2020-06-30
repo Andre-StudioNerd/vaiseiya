@@ -1,11 +1,12 @@
 class TelaInicial {
-  
+ 
   contructor() {}
 
   draw() {
     this._imagemDeFundo();
     this._texto();
     this._botao();
+    somIntro.play();
     
   }
 
