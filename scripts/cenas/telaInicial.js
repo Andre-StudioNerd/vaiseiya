@@ -2,7 +2,7 @@ class TelaInicial {
  
   contructor() {
 
-    somIntro.play();
+    
   }
 
   draw() {
