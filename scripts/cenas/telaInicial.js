@@ -1,4 +1,5 @@
 class TelaInicial {
+  
   contructor() {}
 
   draw() {
@@ -10,7 +11,7 @@ class TelaInicial {
 
   _imagemDeFundo() {
     image(imagemTelaInicial, 0, 0, width, height);
-    somIntro.loop();
+    
     
   }
 
