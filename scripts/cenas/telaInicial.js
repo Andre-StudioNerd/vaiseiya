@@ -6,8 +6,9 @@ class TelaInicial {
     this._imagemDeFundo();
     this._texto();
     this._botao();
-    somIntro.play();
-    somIntro.pause();
+    this._intro();
+    
+    
     
   }
 
@@ -30,4 +31,10 @@ class TelaInicial {
     botaoGerenciador.y = height / 7 * 5
     botaoGerenciador.draw();
   }
+
+  _intro(){
+    somIntro.play();
+    somIntro.pause();
+  }
+  
 }
