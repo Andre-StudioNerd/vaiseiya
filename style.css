@@ -25,13 +25,13 @@ canvas {
   letter-spacing: .25rem;
   box-shadow: 2px 2px 0px 1px #4a4c69;
   text-transform: uppercase;
-  background-color: #8386b5;
+  background-color: #25c1f2;
   border: none;
   border-radius: .75rem;
-  color: #fff;
+  color: #febc2c;
 }
 
 .botao-tela-inicial:hover {
-  background-color: #ffc0c1;
+  background-color: #0ab6ed;
   box-shadow: 2px 2px 0px 1px #b58a8a;
 }
