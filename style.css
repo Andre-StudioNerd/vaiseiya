@@ -19,7 +19,7 @@ canvas {
 }
 
 .botao-tela-inicial {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: SFMono-Regular, Menlo, Monaco,Consolas, "Liberation Mono","Courier New", monospace;
   padding: 1rem 1.25rem;
   font-size: 1.5rem;
   letter-spacing: .25rem;
