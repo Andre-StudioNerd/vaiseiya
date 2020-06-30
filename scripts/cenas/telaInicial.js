@@ -1,6 +1,9 @@
 class TelaInicial {
  
-  contructor() {}
+  contructor() {
+
+    somIntro.play();
+  }
 
   draw() {
     this._imagemDeFundo();
@@ -32,9 +35,6 @@ class TelaInicial {
     botaoGerenciador.draw();
   }
 
-  _intro(){
-    somIntro.play();
-    somIntro.pause();
-  }
+  
   
 }
