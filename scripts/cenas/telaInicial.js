@@ -7,6 +7,7 @@ class TelaInicial {
     this._texto();
     this._botao();
     somIntro.play();
+    somIntro.pause();
     
   }
 
