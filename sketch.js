@@ -11,7 +11,7 @@ function setup() {
     jogo,
     telaInicial
   };
-  botaoGerenciador = new BotaoGerenciador('Iniciar', width / 2, height / 2);
+  botaoGerenciador = new BotaoGerenciador('Jogar', width / 2, height / 2);
 
 }
 
