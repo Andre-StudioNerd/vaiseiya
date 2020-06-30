@@ -22,5 +22,5 @@ function preload() {
     somDoJogo =
     loadSound('sons/intro.mp3');
   somIntro =
-    loadSound('sons/intro_vs.mp3');
+    loadSound('sons/intro_grito.mp3');
 }
