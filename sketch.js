@@ -1,18 +1,20 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  frameRate(45);
-  somIntro.loop();
-  
+  frameRate(40);
+  masterVolume(0.1);
 
-  jogo = new Jogo();
+  botaoGerenciador = new BotaoGerenciador('JOGAR', width / 2, height / 2, 'iniciar');
   telaInicial = new TelaInicial();
+  jogo = new Jogo();
+
   jogo.setup();
+
   cenas = {
-    jogo,
-    telaInicial
+    jogo: jogo,
+    telaInicial: telaInicial
   };
-  botaoGerenciador = new BotaoGerenciador('Jogar', width / 2, height / 2);
+
 
 }
 
@@ -22,5 +24,14 @@ function keyPressed() {
 
 function draw() {
   cenas[cenaAtual].draw();
-  
 }
+
+/*
+  if (stage == 0) {
+    splashGame.draw();
+  }
+
+  if (stage == 1) {
+    jogo.draw();
+  }
+*/
